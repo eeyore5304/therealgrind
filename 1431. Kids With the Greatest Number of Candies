@@ -1,0 +1,17 @@
+class Solution(object):
+    def kidsWithCandies(self, candies, extraCandies):
+        """
+        :type candies: List[int]
+        :type extraCandies: int
+        :rtype: List[bool]
+        """
+        max_candies = 0
+        for candy in candies:
+            max_candies = max(max_candies, candy)
+            
+        for i in range(len(candies)):
+            if extraCandies + candies[i] >= max_candies:
+                candies[i] = True
+            else:
+                candies[i] = False
+        return candies
