@@ -1,0 +1,13 @@
+class Solution(object):
+    def shuffle(self, nums, n):
+        """
+        :type nums: List[int]
+        :type n: int
+        :rtype: List[int]
+        """
+        res = []
+        for idx in range(n):
+            res.append(nums[idx])
+            res.append(nums[idx+n])
+        return res
+            
