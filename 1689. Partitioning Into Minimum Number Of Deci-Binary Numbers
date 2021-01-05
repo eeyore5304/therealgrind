@@ -1,0 +1,10 @@
+class Solution(object):
+    def minPartitions(self, n):
+        """
+        :type n: str
+        :rtype: int
+        """
+        deci_nums = 0
+        for num in n:
+            deci_nums = max(deci_nums, int(num))
+        return deci_nums
